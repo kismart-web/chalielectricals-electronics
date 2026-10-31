@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Chali Electricals & Electronics</title>
+<meta name="description" content="Electrical installation, solar, CCTV, satellite TV, repairs and equipment services in Sondu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+
+<style>
+.page-hero{padding:95px 0 80px;background:linear-gradient(135deg,#071a2f,#0b4380);color:#fff}
+.page-hero .section-label{color:#b9d4ff}
+.page-hero h1{margin:12px 0 18px;font-family:"Poppins",sans-serif;font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2px}
+.page-hero h1 span{color:#4c9aff}
+.page-hero p{max-width:700px;color:#c5d6e8;font-size:12px;line-height:1.9}
+.page-section{padding:85px 0}
+.page-section.alt{background:#f7f9fc}
+.page-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.page-grid.reverse .page-media{order:2}
+.page-media{overflow:hidden;border-radius:20px;box-shadow:0 20px 50px rgba(7,26,47,.12)}
+.page-media img{width:100%;height:390px;display:block;object-fit:cover}
+.page-copy .section-label{color:#0b5ed7}
+.page-copy h2{margin:10px 0 18px;font-family:"Poppins",sans-serif;font-size:34px;line-height:1.15}
+.page-copy h2 span{color:#0b5ed7}
+.page-copy p{color:#64748b;font-size:11px;line-height:1.9;margin-bottom:14px}
+.feature-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.feature-point{display:flex;gap:9px;align-items:flex-start;padding:14px;border:1px solid #e6ebf2;border-radius:12px;background:#fff}
+.feature-point i{color:#0b5ed7;margin-top:2px}
+.feature-point strong{display:block;font-size:9px}
+.feature-point span{display:block;color:#718096;font-size:8px;margin-top:3px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-box{padding:26px;border:1px solid #e1e8f0;border-radius:16px;background:#fff;transition:.3s}
+.service-box:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(7,26,47,.08)}
+.service-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#edf5ff;color:#0b5ed7;font-size:18px;margin-bottom:16px}
+.service-box h3{font-family:"Poppins",sans-serif;font-size:14px;margin-bottom:7px}
+.service-box p{color:#718096;font-size:9px;line-height:1.75}
+.page-cta{padding:50px 0;background:#0b5ed7;color:#fff}
+.page-cta .cta-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.page-cta h2{font-family:"Poppins",sans-serif;font-size:28px}
+.page-cta p{color:#dceaff;font-size:10px;margin-top:6px}
+.page-cta a{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:9px;background:#fff;color:#071a2f;font-size:9px;font-weight:800}
+.gallery-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-page-item{height:240px;overflow:hidden;border-radius:15px;position:relative;background:#102944}
+.gallery-page-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery-page-item:hover img{transform:scale(1.06)}
+.gallery-page-item .caption{position:absolute;left:12px;right:12px;bottom:12px;padding:10px;border-radius:9px;background:rgba(7,26,47,.82);color:#fff;font-size:9px;font-weight:700}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.contact-card{padding:30px;border-radius:18px;background:#071a2f;color:#fff}
+.contact-card h2{font-family:"Poppins",sans-serif;font-size:28px;margin-bottom:12px}
+.contact-card p{color:#b9cde2;font-size:10px;line-height:1.8}
+.contact-item{display:flex;gap:12px;margin-top:20px}
+.contact-item i{color:#4c9aff;width:18px}
+.contact-item strong{display:block;font-size:9px}
+.contact-item span,.contact-item a{display:block;color:#b9cde2;font-size:9px;margin-top:3px}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.contact-actions a{padding:11px 14px;border-radius:8px;background:#0b5ed7;color:#fff;font-size:9px;font-weight:800}
+.map-wrap{min-height:500px;border-radius:18px;overflow:hidden;border:1px solid #e1e8f0;background:#eef3f8}
+.map-wrap iframe{width:100%;height:100%;min-height:500px;border:0}
+.catalog-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.catalog-mini .mini-card{overflow:hidden;border:1px solid #e1e8f0;border-radius:14px;background:#fff}
+.mini-card img{width:100%;height:180px;object-fit:cover;display:block}
+.mini-card div{padding:15px}
+.mini-card h3{font-family:"Poppins",sans-serif;font-size:12px}
+.mini-card p{font-size:8px;color:#718096;margin-top:5px;line-height:1.6}
+@media(max-width:800px){.page-grid,.contact-grid{grid-template-columns:1fr}.page-grid.reverse .page-media{order:0}.service-grid{grid-template-columns:1fr 1fr}.gallery-page-grid{grid-template-columns:1fr 1fr}.catalog-mini{grid-template-columns:1fr 1fr}.page-cta .cta-row{flex-direction:column;align-items:flex-start}}
+@media(max-width:550px){.page-section{padding:60px 0}.feature-points,.service-grid,.gallery-page-grid,.catalog-mini{grid-template-columns:1fr}.page-media img{height:300px}.page-cta h2{font-size:23px}.contact-card{padding:22px}.map-wrap,.map-wrap iframe{min-height:380px}}
+</style>
+
+</head>
+<body>
+
+<div class="site-loader" id="siteLoader" aria-label="Loading Chali Electricals & Electronics">
+    <div class="loader-inner">
+        <img src="../images/logo.webp" alt="Chali Electricals & Electronics logo">
+        <div class="loader-ring"></div>
+        <p>CHALI ELECTRICALS & ELECTRONICS</p>
+        <span>Loading...</span>
+    </div>
+</div>
+
+<header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- BRAND -->
+
+                <a href="../index.html"
+                    class="brand">
+
+                    <div class="brand-icon"><img src="../images/logo.webp" alt="Chali Electricals & Electronics logo"></div>
+
+
+                    <div class="brand-text">
+
+                        <span>
+                            CHALI
+                        </span>
+
+                        <small>
+                            Electricals & Electronics
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <!-- DESKTOP NAVIGATION -->
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+
+                    <!-- PRODUCTS -->
+
+                    <li class="dropdown">
+
+                        <a href="products.html">
+
+                            Products
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="electrical.html">
+
+                                    <i class="fa-solid fa-plug"></i>
+
+                                    Electrical Appliances
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="electronics.html">
+
+                                    <i class="fa-solid fa-tv"></i>
+
+                                    Electronic Devices
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="products.html#tools">
+
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                                    Power Tools
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="products.html#solar">
+
+                                    <i class="fa-solid fa-solar-panel"></i>
+
+                                    Solar & Backup Power
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="products.html#cctv">
+
+                                    <i class="fa-solid fa-video"></i>
+
+                                    CCTV & Security
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="products.html#motors">
+
+                                    <i class="fa-solid fa-gears"></i>
+
+                                    Motors & Pumps
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- SERVICES -->
+
+                    <li class="dropdown">
+
+                        <a href="services.html">
+
+                            Services
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="services.html#electrical-installation">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                    Electrical Installation
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="services.html#solar-installation">
+
+                                    <i class="fa-solid fa-sun"></i>
+
+                                    Solar Installation
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="services.html#cctv-installation">
+
+                                    <i class="fa-solid fa-camera"></i>
+
+                                    CCTV Installation
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="services.html#satellite">
+
+                                    <i class="fa-solid fa-satellite-dish"></i>
+
+                                    DStv / GOtv / StarTimes
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="services.html#repairs">
+
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                                    Repairs
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- NAVIGATION CTA -->
+
+                <a href="https://wa.me/254724432619"
+                    class="nav-cta" target="_blank" rel="noopener">
+
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    <span>WhatsApp Us</span></a>
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+<main>
+
+<section class="page-hero"><div class="container"><div class="section-label"><span></span> WHAT WE DO</div><h1>Professional <span>Services.</span></h1><p>Beyond supplying products, Chali Electricals & Electronics helps customers with installations, repairs, setup and practical technical solutions.</p></div></section>
+<section class="page-section alt"><div class="container"><div class="service-grid"><article class="service-box" id="electrical-installation"><div class="service-icon"><i class="fa-solid fa-bolt"></i></div><h3>Electrical Installation</h3><p>Domestic and commercial electrical wiring, fittings, switches, sockets, lighting and related installation work.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article>
+<article class="service-box" id="solar-installation"><div class="service-icon"><i class="fa-solid fa-solar-panel"></i></div><h3>Solar Installation</h3><p>Solar equipment supply, system setup and installation for practical backup and renewable power solutions.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article>
+<article class="service-box" id="cctv-installation"><div class="service-icon"><i class="fa-solid fa-camera"></i></div><h3>CCTV Installation</h3><p>CCTV camera supply, setup and installation to improve security for homes, shops and businesses.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article>
+<article class="service-box" id="satellite"><div class="service-icon"><i class="fa-solid fa-satellite-dish"></i></div><h3>DStv / GOtv / StarTimes</h3><p>Decoder and dish setup, satellite equipment and installation support for home entertainment.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article>
+<article class="service-box" id="repairs"><div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Repairs & Servicing</h3><p>Repair and troubleshooting services for selected electrical appliances and electronic devices.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article>
+<article class="service-box" id="power"><div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div><h3>Power Equipment Setup</h3><p>Support with inverters, batteries, water pumps, motors and other electrical equipment.</p><a href="contact.html" style="display:inline-flex;margin-top:12px;color:#0b5ed7;font-size:8px;font-weight:800">Request Service <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></article></div></div></section>
+<section class="page-section"><div class="container"><div class="page-grid"><div class="page-copy"><div class="section-label"><span></span> FROM PRODUCT TO SOLUTION</div><h2>Get the equipment <span>and support together.</span></h2><p>Tell us what you are working on, the equipment you need, or the problem you want solved. We can guide you toward suitable products and available services.</p><div class="feature-points"><div class="feature-point"><i class="fa-solid fa-bolt"></i><div><strong>Electrical Work</strong><span>Installation & troubleshooting</span></div></div><div class="feature-point"><i class="fa-solid fa-sun"></i><div><strong>Solar Solutions</strong><span>Supply & installation</span></div></div><div class="feature-point"><i class="fa-solid fa-video"></i><div><strong>Security</strong><span>CCTV installation</span></div></div><div class="feature-point"><i class="fa-solid fa-satellite-dish"></i><div><strong>Entertainment</strong><span>Satellite TV setup</span></div></div></div></div><div class="page-media"><img src="../images/repair.webp" alt="Chali repair and service work" loading="lazy"></div></div></div></section>
+<section class="page-cta"><div class="container"><div class="cta-row"><div><h2>Ready to get started?</h2><p>Call or WhatsApp Chali on 0724432619.</p></div><a href="tel:+254724432619">Call Chali <i class="fa-solid fa-phone"></i></a></div></div></section>
+
+</main>
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a href="../index.html" class="footer-logo">
+
+                    <div class="footer-logo-icon"><img src="../images/logo.webp" alt="Chali Electricals & Electronics logo"></div>
+
+                    <div>
+                        <strong>CHALI</strong>
+                        <span>ELECTRICALS & ELECTRONICS</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Your trusted destination for electrical appliances,
+                    electronics, tools, solar solutions, installations,
+                    repairs and more in Sondu.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="https://www.facebook.com/share/1C5ZT6iThK/" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://wa.me/254724432619" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="mailto:maclixelectricals@gmail.com"
+                       aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">Home</a>
+
+                <a href="../index.html#about">About</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="../index.html#services">Services</a>
+
+                <a href="../index.html#gallery">Gallery</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h3>Our Services</h3>
+
+                <a href="../index.html#services">
+                    Electrical Installation
+                </a>
+
+                <a href="../index.html#services">
+                    Electrical Repairs
+                </a>
+
+                <a href="../index.html#services">
+                    Solar Installation
+                </a>
+
+                <a href="../index.html#services">
+                    CCTV Installation
+                </a>
+
+                <a href="../index.html#services">
+                    DStv / GOtv / StarTimes
+                </a>
+
+                <a href="../index.html#services">
+                    Equipment Setup
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Sondu–Kisumu<br>
+                        Opposite Sondu Steel & Cement
+                    </span>
+
+                </p>
+
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        0724432619
+                    </span>
+
+                </p>
+
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        maclixelectricals@gmail.com
+                    </span>
+
+                </p>
+
+
+                <p>
+                    <i class="fa-regular fa-clock"></i>
+
+                    <span>
+                        Monday – Sunday<br>
+                        7:00 AM – 8:30 PM
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Chali Electricals & Electronics.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Designed & Developed by
+                <a
+                    href="https://kismart-web.github.io/portfolio-project/"
+                    target="_blank"
+                    rel="noopener">
+                    D.K Smart-Tech & Web Solns
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BACK TO TOP -->
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </a>
+
+</footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

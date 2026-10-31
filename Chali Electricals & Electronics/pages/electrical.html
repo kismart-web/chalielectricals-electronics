@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Electrical Appliances | Chali Electricals &amp; Electronics</title>
+<meta content="Electrical appliances, wiring, lighting, tools, solar and power equipment." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
+<style>
+.page-hero{padding:95px 0 80px;background:linear-gradient(135deg,#071a2f,#0b4380);color:#fff}
+.page-hero .section-label{color:#b9d4ff}
+.page-hero h1{margin:12px 0 18px;font-family:"Poppins",sans-serif;font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2px}
+.page-hero h1 span{color:#4c9aff}
+.page-hero p{max-width:700px;color:#c5d6e8;font-size:12px;line-height:1.9}
+.page-section{padding:85px 0}
+.page-section.alt{background:#f7f9fc}
+.page-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.page-grid.reverse .page-media{order:2}
+.page-media{overflow:hidden;border-radius:20px;box-shadow:0 20px 50px rgba(7,26,47,.12)}
+.page-media img{width:100%;height:390px;display:block;object-fit:cover}
+.page-copy .section-label{color:#0b5ed7}
+.page-copy h2{margin:10px 0 18px;font-family:"Poppins",sans-serif;font-size:34px;line-height:1.15}
+.page-copy h2 span{color:#0b5ed7}
+.page-copy p{color:#64748b;font-size:11px;line-height:1.9;margin-bottom:14px}
+.feature-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.feature-point{display:flex;gap:9px;align-items:flex-start;padding:14px;border:1px solid #e6ebf2;border-radius:12px;background:#fff}
+.feature-point i{color:#0b5ed7;margin-top:2px}
+.feature-point strong{display:block;font-size:9px}
+.feature-point span{display:block;color:#718096;font-size:8px;margin-top:3px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-box{padding:26px;border:1px solid #e1e8f0;border-radius:16px;background:#fff;transition:.3s}
+.service-box:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(7,26,47,.08)}
+.service-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#edf5ff;color:#0b5ed7;font-size:18px;margin-bottom:16px}
+.service-box h3{font-family:"Poppins",sans-serif;font-size:14px;margin-bottom:7px}
+.service-box p{color:#718096;font-size:9px;line-height:1.75}
+.page-cta{padding:50px 0;background:#0b5ed7;color:#fff}
+.page-cta .cta-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.page-cta h2{font-family:"Poppins",sans-serif;font-size:28px}
+.page-cta p{color:#dceaff;font-size:10px;margin-top:6px}
+.page-cta a{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:9px;background:#fff;color:#071a2f;font-size:9px;font-weight:800}
+.gallery-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-page-item{height:240px;overflow:hidden;border-radius:15px;position:relative;background:#102944}
+.gallery-page-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery-page-item:hover img{transform:scale(1.06)}
+.gallery-page-item .caption{position:absolute;left:12px;right:12px;bottom:12px;padding:10px;border-radius:9px;background:rgba(7,26,47,.82);color:#fff;font-size:9px;font-weight:700}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.contact-card{padding:30px;border-radius:18px;background:#071a2f;color:#fff}
+.contact-card h2{font-family:"Poppins",sans-serif;font-size:28px;margin-bottom:12px}
+.contact-card p{color:#b9cde2;font-size:10px;line-height:1.8}
+.contact-item{display:flex;gap:12px;margin-top:20px}
+.contact-item i{color:#4c9aff;width:18px}
+.contact-item strong{display:block;font-size:9px}
+.contact-item span,.contact-item a{display:block;color:#b9cde2;font-size:9px;margin-top:3px}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.contact-actions a{padding:11px 14px;border-radius:8px;background:#0b5ed7;color:#fff;font-size:9px;font-weight:800}
+.map-wrap{min-height:500px;border-radius:18px;overflow:hidden;border:1px solid #e1e8f0;background:#eef3f8}
+.map-wrap iframe{width:100%;height:100%;min-height:500px;border:0}
+.catalog-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.catalog-mini .mini-card{overflow:hidden;border:1px solid #e1e8f0;border-radius:14px;background:#fff}
+.mini-card img{width:100%;height:180px;object-fit:cover;display:block}
+.mini-card div{padding:15px}
+.mini-card h3{font-family:"Poppins",sans-serif;font-size:12px}
+.mini-card p{font-size:8px;color:#718096;margin-top:5px;line-height:1.6}
+@media(max-width:800px){.page-grid,.contact-grid{grid-template-columns:1fr}.page-grid.reverse .page-media{order:0}.service-grid{grid-template-columns:1fr 1fr}.gallery-page-grid{grid-template-columns:1fr 1fr}.catalog-mini{grid-template-columns:1fr 1fr}.page-cta .cta-row{flex-direction:column;align-items:flex-start}}
+@media(max-width:550px){.page-section{padding:60px 0}.feature-points,.service-grid,.gallery-page-grid,.catalog-mini{grid-template-columns:1fr}.page-media img{height:300px}.page-cta h2{font-size:23px}.contact-card{padding:22px}.map-wrap,.map-wrap iframe{min-height:380px}}
+</style>
+</head>
+<body>
+<div aria-label="Loading Chali Electricals &amp; Electronics" class="site-loader" id="siteLoader">
+<div class="loader-inner">
+<img alt="Chali Electricals &amp; Electronics logo" src="../images/logo.webp"/>
+<div class="loader-ring"></div>
+<p>CHALI ELECTRICALS &amp; ELECTRONICS</p>
+<span>Loading...</span>
+</div>
+</div>
+<header class="site-header">
+<div class="container">
+<nav class="navbar">
+<!-- BRAND -->
+<a class="brand" href="../index.html">
+<div class="brand-icon"><img alt="Chali Electricals &amp; Electronics logo" src="../images/logo.webp"/></div>
+<div class="brand-text">
+<span>
+                            CHALI
+                        </span>
+<small>
+                            Electricals &amp; Electronics
+                        </small>
+</div>
+</a>
+<!-- DESKTOP NAVIGATION -->
+<ul class="nav-links">
+<li>
+<a href="../index.html">
+                            Home
+                        </a>
+</li>
+<li>
+<a href="about.html">
+                            About
+                        </a>
+</li>
+<!-- PRODUCTS -->
+<li class="dropdown">
+<a href="products.html">
+
+                            Products
+
+                            <i class="fa-solid fa-chevron-down"></i>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="electrical.html">
+<i class="fa-solid fa-plug"></i>
+
+                                    Electrical Appliances
+
+                                </a>
+</li>
+<li>
+<a href="electronics.html">
+<i class="fa-solid fa-tv"></i>
+
+                                    Electronic Devices
+
+                                </a>
+</li>
+<li>
+<a href="products.html#tools">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+                                    Power Tools
+
+                                </a>
+</li>
+<li>
+<a href="products.html#solar">
+<i class="fa-solid fa-solar-panel"></i>
+
+                                    Solar &amp; Backup Power
+
+                                </a>
+</li>
+<li>
+<a href="products.html#cctv">
+<i class="fa-solid fa-video"></i>
+
+                                    CCTV &amp; Security
+
+                                </a>
+</li>
+<li>
+<a href="products.html#motors">
+<i class="fa-solid fa-gears"></i>
+
+                                    Motors &amp; Pumps
+
+                                </a>
+</li>
+</ul>
+</li>
+<!-- SERVICES -->
+<li class="dropdown">
+<a href="services.html">
+
+                            Services
+
+                            <i class="fa-solid fa-chevron-down"></i>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="services.html#electrical-installation">
+<i class="fa-solid fa-bolt"></i>
+
+                                    Electrical Installation
+
+                                </a>
+</li>
+<li>
+<a href="services.html#solar-installation">
+<i class="fa-solid fa-sun"></i>
+
+                                    Solar Installation
+
+                                </a>
+</li>
+<li>
+<a href="services.html#cctv-installation">
+<i class="fa-solid fa-camera"></i>
+
+                                    CCTV Installation
+
+                                </a>
+</li>
+<li>
+<a href="services.html#satellite">
+<i class="fa-solid fa-satellite-dish"></i>
+
+                                    DStv / GOtv / StarTimes
+
+                                </a>
+</li>
+<li>
+<a href="services.html#repairs">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+                                    Repairs
+
+                                </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="gallery.html">
+                            Gallery
+                        </a>
+</li>
+<li>
+<a href="contact.html">
+                            Contact
+                        </a>
+</li>
+</ul>
+<!-- NAVIGATION CTA -->
+<a class="nav-cta" href="https://wa.me/254724432619" rel="noopener" target="_blank">
+<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    <span>WhatsApp Us</span></a>
+<!-- MOBILE MENU BUTTON -->
+<button aria-label="Open navigation menu" class="menu-toggle" type="button">
+<i class="fa-solid fa-bars"></i>
+</button>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero"><div class="container"><div class="section-label"><span></span> ELECTRICAL APPLIANCES</div><h1>Power, Lighting &amp; <span>Supplies.</span></h1><p>Electrical products for homes, electricians, businesses, workshops and installation projects.</p></div></section>
+<section class="page-section alt"><div class="container"><div class="catalog-mini"><article class="mini-card"><img alt="LED Lighting" loading="lazy" src="../images/lights.webp"/><div><h3>LED Lighting</h3><p>Bulbs, fixtures and practical lighting solutions.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Wires &amp; Cables" loading="lazy" src="../images/wires.webp"/><div><h3>Wires &amp; Cables</h3><p>Electrical wires, dropping wires and cable options.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Switches &amp; Sockets" loading="lazy" src="../images/sockets &amp; switches.webp"/><div><h3>Switches &amp; Sockets</h3><p>Switches, sockets and electrical accessories.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Welding Machines" loading="lazy" src="../images/welding-machine.webp"/><div><h3>Welding Machines</h3><p>Workshop welding equipment.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Drills &amp; Power Tools" loading="lazy" src="../images/drill.webp"/><div><h3>Drills &amp; Power Tools</h3><p>Drills and tools for technicians and projects.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Solar Equipment" loading="lazy" src="../images/solar-equipment.webp"/><div><h3>Solar Equipment</h3><p>Solar panels and related power equipment.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Inverters &amp; Batteries" loading="lazy" src="../images/inverter.webp"/><div><h3>Inverters &amp; Batteries</h3><p>Backup power equipment and storage.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Workshop Equipment" loading="lazy" src="../images/tools.webp"/><div><h3>Workshop Equipment</h3><p>Practical equipment for workshop applications.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Water Pumps &amp; Motors" loading="lazy" src="../images/water-pump.webp"/><div><h3>Water Pumps &amp; Motors</h3><p>Power equipment for water and other applications.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article>
+<article class="mini-card"><img alt="Electrical Appliances" loading="lazy" src="../images/electric-cooker.webp"/><div><h3>Electrical Appliances</h3><p>A broad selection of appliances and supplies.</p><a href="contact.html" style="display:inline-flex;margin-top:9px;color:#0b5ed7;font-size:8px;font-weight:800">Enquire Now <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i></a></div></article></div></div></section>
+<section class="page-cta"><div class="container"><div class="cta-row"><div><h2>Looking for a specific item?</h2><p>Ask Chali about availability and pricing.</p></div><a href="https://wa.me/254724432619" rel="noopener" target="_blank">WhatsApp Enquiry <i class="fa-brands fa-whatsapp"></i></a></div></div></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-main">
+<!-- BRAND -->
+<div class="footer-brand">
+<a class="footer-logo" href="../index.html">
+<div class="footer-logo-icon"><img alt="Chali Electricals &amp; Electronics logo" src="../images/logo.webp"/></div>
+<div>
+<strong>CHALI</strong>
+<span>ELECTRICALS &amp; ELECTRONICS</span>
+</div>
+</a>
+<p>
+                    Your trusted destination for electrical appliances,
+                    electronics, tools, solar solutions, installations,
+                    repairs and more in Sondu.
+                </p>
+<div class="footer-socials">
+<a aria-label="Facebook" href="https://www.facebook.com/share/1C5ZT6iThK/">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/254724432619" rel="noopener" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<a aria-label="Email" href="mailto:maclixelectricals@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+</div>
+</div>
+<!-- QUICK LINKS -->
+<div class="footer-column">
+<h3>Quick Links</h3>
+<a href="../index.html">Home</a>
+<a href="../index.html#about">About</a>
+<a href="products.html">Products</a>
+<a href="../index.html#services">Services</a>
+<a href="../index.html#gallery">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
+<!-- SERVICES -->
+<div class="footer-column">
+<h3>Our Services</h3>
+<a href="../index.html#services">
+                    Electrical Installation
+                </a>
+<a href="../index.html#services">
+                    Electrical Repairs
+                </a>
+<a href="../index.html#services">
+                    Solar Installation
+                </a>
+<a href="../index.html#services">
+                    CCTV Installation
+                </a>
+<a href="../index.html#services">
+                    DStv / GOtv / StarTimes
+                </a>
+<a href="../index.html#services">
+                    Equipment Setup
+                </a>
+</div>
+<!-- CONTACT -->
+<div class="footer-column footer-contact">
+<h3>Contact</h3>
+<p>
+<i class="fa-solid fa-location-dot"></i>
+<span>
+                        Sondu–Kisumu<br/>
+                        Opposite Sondu Steel &amp; Cement
+                    </span>
+</p>
+<p>
+<i class="fa-solid fa-phone"></i>
+<span>
+                        0724432619
+                    </span>
+</p>
+<p>
+<i class="fa-solid fa-envelope"></i>
+<span>
+                        maclixelectricals@gmail.com
+                    </span>
+</p>
+<p>
+<i class="fa-regular fa-clock"></i>
+<span>
+                        Monday – Sunday<br/>
+                        7:00 AM – 8:30 PM
+                    </span>
+</p>
+</div>
+</div>
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+<p>
+                © 2026 Chali Electricals &amp; Electronics.
+                All Rights Reserved.
+            </p>
+<p>
+                Designed &amp; Developed by
+                <a href="https://kismart-web.github.io/portfolio-project/" rel="noopener" target="_blank">
+                    D.K Smart-Tech &amp; Web Solns
+                </a>
+</p>
+</div>
+</div>
+<!-- BACK TO TOP -->
+<a aria-label="Back to top" class="back-to-top" href="#">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+</footer>
+<script src="../js/script.js"></script>
+</body>
+</html>
